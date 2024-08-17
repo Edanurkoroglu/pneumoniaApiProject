@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.MainPage"
+             BackgroundColor="#f0f0f5">
+    <!-- Light professional background color -->
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="20">
+
+            <Button Text="Upload Photo"
+                    Clicked="OnUploadPhotoClicked"
+                    BackgroundColor="#007acc"
+                    TextColor="White"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    ImageSource="upload_icon.png"/>
+            <!-- Icon added -->
+
+            <Button Text="Open Camera"
+                    Clicked="OnOpenCameraClicked"
+                    BackgroundColor="#28a745"
+                    TextColor="White"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    ImageSource="camera_icon.png"/>
+            <!-- Icon added -->
+
+            <Image x:Name="UploadedPhoto"
+                   WidthRequest="200"
+                   HeightRequest="200"
+                   Aspect="AspectFill"
+                   IsVisible="False"
+                   HorizontalOptions="Center" />
+
+            <Button Text="Send"
+                    Clicked="OnSendClicked"
+                    BackgroundColor="#ff9933"
+                    TextColor="White"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    ImageSource="send_icon.png"/>
+            <!-- Icon added -->
+
+            <Button Text="Upload Video"
+                    Clicked="OnUploadVideoClicked"
+                    BackgroundColor="#007acc"
+                    TextColor="White"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    ImageSource="video_icon.png"/>
+            <!-- Icon added -->
+
+            <Label x:Name="VideoFileNameLabel"
+                   TextColor="Black"
+                   FontAttributes="Italic"
+                   FontSize="Small"
+                   IsVisible="False"/>
+            <!-- Display video file name -->
+
+            <Label Text="Result:" TextColor="Black" FontAttributes="Bold" FontSize="Medium" />
+            <Entry x:Name="ResultTextBox"
+                   IsReadOnly="True"
+                   BackgroundColor="#d9d9d9"
+                   TextColor="Black"
+                   HeightRequest="40" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
